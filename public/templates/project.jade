@@ -5,21 +5,15 @@ block prepend title
   #{ page.title } | 
 
 block content
-  if page.metadata.image
-    div.span5.logo
-      img(src=page.metadata.image.url,
-          title=page.metadata.image.title,
-          alt=page.metadata.image.alt)
-            
+  if page.metadata.image_url
+    div.span5.screenshot
+      a(href=page.metadata.url)
+        img(src=page.metadata.image_url,
+            alt=page.title)
+
   div.span10
     h1=page.title
-    p!=page.html
-
     if page.metadata.url
-      div.website
-        a(href=page.metadata.url) page.metadata.url
-
-  div#project-description.span16
-    h3 What I did for #{page.title}:
-    page.metadata.responsibilities
+      a(href=page.metadata.url) #{page.metadata.url}
+    p!=page.html
 
