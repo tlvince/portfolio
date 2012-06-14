@@ -1,0 +1,9 @@
+{
+    "name": "Portfolio",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "wintersmith": "1.0.6",
+      "wintersmith-less": "0.1.0"
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "locals": {
+    "title": "Portfolio | Tom Vincent",
+    "author": "Tom Vincent",
+    "url": "http://tlvince.com",
+    "index_count": 9
+  },
+  "plugins": [
+    "wintersmith-less"
+  ]
+}

@@ -1,0 +1,30 @@
+!!!5
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title
+      block title
+        = locals.title
+    meta(name='description', content= page.description)
+    meta(name='author', content= locals.author)
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+
+    link(rel='stylesheet', href='assets/less/style.css')
+
+    // if lt IE 9
+      script(src='//html5shim.googlecode.com/svn/trunk/html5.js')
+
+  body
+    div.container
+
+      header.row
+        include ../includes/header
+
+      div#content.row
+        block content
+
+      footer
+        include ../includes/footer
+
+      include ../includes/analytics
+

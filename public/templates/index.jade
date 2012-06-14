@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  - var projects = _.chain(contents.project).compact().sortBy(function(item) {
+  -   return -item.date
+  - }).first(locals.index_count).value()
+
+  each project in projects
+    project.post
+      header
+        h2
+          a(href=project.url)= project.title
+      section.content!= project.intro
