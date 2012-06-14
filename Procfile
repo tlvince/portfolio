@@ -1,1 +1,1 @@
-web: wintersmith preview
+web: wintersmith preview --chdir public
