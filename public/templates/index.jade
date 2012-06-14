@@ -11,10 +11,10 @@ block content
 
     ul#projects
       each project in projects
-        li.project.span5
-          a(href=project.url)
-            if project.metadata.image
-              img(src=project.metadata.image.url,
-                  title=project.metadata.image.title,
-                  alt=project.metadata.image.alt)
+        a(href=project.url)
+          li.project.span5
+            if project.metadata.image_url
+              img(src=project.metadata.image_url,
+                  title=project.metadata.image_title,
+                  alt=project.metadata.image_alt)
             p= project.metadata.abstract
