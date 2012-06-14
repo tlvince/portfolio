@@ -1,3 +1,6 @@
 [submodule "public/contents/project"]
 	path = public/contents/project
-	url = /home/tom/doc/personal/projects
+	url = https://github.com/tlvince/portfolio-projects.git
+[submodule "public/contents/assets"]
+	path = public/contents/assets
+	url = https://github.com/tlvince/portfolio-theme.git
