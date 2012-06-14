@@ -1,1 +1,1 @@
-web: coffee app.coffee
+web: wintersmith preview
