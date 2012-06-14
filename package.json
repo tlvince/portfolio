@@ -2,8 +2,12 @@
     "name": "Portfolio",
     "version": "0.1.0",
     "private": true,
+    "engines": {
+      "node": "0.6.18",
+      "npm": "1.1.21"
+    },
     "dependencies": {
       "wintersmith": "1.0.6",
-      "wintersmith-less": "0.1.0"
+      "wintersmith-stylus": "0.1.0"
     }
 }
