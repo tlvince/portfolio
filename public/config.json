@@ -6,6 +6,6 @@
     "index_count": 9
   },
   "plugins": [
-    "wintersmith-less"
+    "wintersmith-stylus"
   ]
 }
