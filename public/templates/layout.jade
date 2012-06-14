@@ -5,7 +5,8 @@ html(lang='en')
     title
       block title
         = locals.title
-    meta(name='description', content= page.description)
+    block description
+      meta(name='description', content=locals.description)
     meta(name='author', content= locals.author)
     meta(name='viewport', content='width=device-width,initial-scale=1')
 
