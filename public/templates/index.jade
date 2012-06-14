@@ -12,9 +12,10 @@ block content
     ul#projects
       each project in projects
         a(href=project.url)
-          li.project.span5
-            if project.metadata.image_url
-              img(src=project.metadata.image_url,
-                  title=project.metadata.image_title,
-                  alt=project.metadata.image_alt)
-            p #{project.metadata.abstract}.
+          li.project.span5(title=project.title)
+            div#project-thumb
+              if project.metadata.image_url
+                img(src=project.metadata.image_url,
+                    alt="A screenshot of #{project.title}")
+            p.title=project.title
+            p.abstract #{project.metadata.abstract}.
