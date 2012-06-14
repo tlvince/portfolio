@@ -3,8 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "engines": {
-      "node": "0.6.18",
-      "npm": "1.1.21"
+      "node": "0.6.18"
     },
     "dependencies": {
       "wintersmith": "1.0.6",
