@@ -2,12 +2,24 @@
 extends layout
 
 block prepend title
-  #{ page.title } -
-
-block header
-  a.back(href='/') << back to index
-  h1= page.title
+  #{ page.title } | 
 
 block content
-  article.post
-    section.content!= page.html
+  if page.metadata.image
+    div.span5.logo
+      img(src=page.metadata.image.url,
+          title=page.metadata.image.title,
+          alt=page.metadata.image.alt)
+            
+  div.span10
+    h1=page.title
+    p!=page.html
+
+    if page.metadata.url
+      div.website
+        a(href=page.metadata.url) page.metadata.url
+
+  div#project-description.span16
+    h3 What I did for #{page.title}:
+    page.metadata.responsibilities
+
