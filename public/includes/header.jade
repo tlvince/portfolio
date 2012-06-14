@@ -1,8 +1,8 @@
 div
   div#title.span7
-    <a href="/" title="Home">Tom Vincent</a>
+    a(href='/', title='Home')=locals.author
 
   div#contact
     ul.pull-right
       li.icon-envelope
-        <a href="mailto:enquiry@tlvince.com">enquiry@tlvince.com</a>
+        a(href='mailto:#{locals.email}')=locals.email
