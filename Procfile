@@ -1,1 +1,1 @@
-web: wintersmith preview --chdir public
+web: wintersmith preview --chdir public --port $PORT
