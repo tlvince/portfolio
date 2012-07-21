@@ -3,14 +3,19 @@ extends layout
 block content
   - var projects = _.chain(contents['project']._.pages).sortBy(function(item) {
   -   return -item.date
-  - }).first(locals.index_count).value()
+  - }).first(locals.index_count).value();
 
-  div.span16
+  .span16
     h1 Life's a project!
-    p Check out the latest things I've been working on:
+    #subtitle.span12
+      p Check out the latest things I've been working on:
+    .span4
+      include ../includes/tags
+      mixin tags
 
+  .span16
     ul#projects
-      each project in projects
+      for project in projects
         a(href=project.url)
           li.project.span5(title=project.title)
             div#project-thumb

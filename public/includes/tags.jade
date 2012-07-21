@@ -1,0 +1,14 @@
+- var tags = {};
+
+for project in projects
+  for tag in project.metadata.tags.split(' ')
+    - if (!(tag in tags))
+      - tags[tag] = true
+
+mixin tags
+  ul#tags.icon-tags
+    for tag in _.keys(tags).sort()
+      li
+        a(href='\##{tag}')=tag
+    li
+      a(href='#all') all
