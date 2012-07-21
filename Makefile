@@ -5,10 +5,17 @@ in=public
 out=build
 style=contents/assets/style
 
-all:
+all: build
+
+build:
 	if test -d $(out); then rm -rf $(out); fi
 	mkdir -p $(out)/assets/style
 	stylus --out $(out)/assets/style --compress $(in)/$(style)/site.styl
 	mv $(in)/$(style) tmp-style
 	wintersmith build --output ../$(out) --chdir $(in)
 	mv tmp-style $(in)/$(style)
+
+preview:
+	wintersmith preview --chdir $(in)
+
+.PHONY: all build preview
