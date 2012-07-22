@@ -18,4 +18,8 @@ build:
 preview:
 	wintersmith preview --chdir $(in)
 
-.PHONY: all build preview
+push:
+	git push origin master
+	git push heroku master
+
+.PHONY: all build preview push
