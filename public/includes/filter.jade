@@ -1,0 +1,13 @@
+if page._metadata.filter
+  filter = page._metadata.filter
+  if filter === "all"
+    - projects = projects.value();
+  else
+    - tags = [];
+    for project in projects.value()
+      if project.metadata.tags.indexOf(filter) != -1
+        - tags.push(project);
+    - projects = tags;
+else
+  - projects = projects.first(locals.index_count).value();
+

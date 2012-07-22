@@ -3,7 +3,9 @@ extends layout
 block content
   - var projects = _.chain(contents['project']._.pages).sortBy(function(item) {
   -   return -item.date
-  - }).first(locals.index_count).value();
+  - })
+
+  include ../includes/filter
 
   .span16
     h1 Life's a project!
