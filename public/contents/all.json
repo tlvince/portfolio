@@ -1,1 +1,1 @@
-{ "template": "index.jade", "filter": "all" }
+{ "template": "all.jade" }

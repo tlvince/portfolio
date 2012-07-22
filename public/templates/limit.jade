@@ -1,0 +1,4 @@
+extends index
+
+block limit
+  - projects = projects.first(locals.index_count).value();

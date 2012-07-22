@@ -4,16 +4,17 @@ block content
   - var projects = _.chain(contents['project']._.pages).sortBy(function(item) {
   -   return -item.date
   - })
-
   include ../includes/filter
+  block limit
 
   .span16
     h1 Life's a project!
     #subtitle.span8
-      p
-        | Check out the latest things I've been working on below or see them 
-        a(href="/all.html", title="All projects") all
-        | .
+      block subtitle
+        p
+          | Check out the latest things I've been working on below or see them 
+          a(href="/all.html", title="All projects") all
+          | .
     .span8
       include ../includes/tags
       mixin tags

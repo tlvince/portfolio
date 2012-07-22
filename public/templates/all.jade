@@ -1,0 +1,10 @@
+extends index
+
+block limit
+  projects = projects.value()
+
+block subtitle
+  p
+    | Check out all my projects below or only the 
+    a(href="/", title="Latest projects") latest
+    | .
