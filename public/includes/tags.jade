@@ -10,5 +10,3 @@ mixin tags
     for tag in _.keys(tags).sort()
       li
         a(href='#{tag}.html', id=tag, class='tag', title='Show #{tag} projects')=tag
-    li
-      a(href='all.html', id='all', class='tag', title='Show all projects') all

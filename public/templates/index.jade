@@ -9,9 +9,12 @@ block content
 
   .span16
     h1 Life's a project!
-    #subtitle.span6
-      p Check out the latest things I've been working on:
-    .span10
+    #subtitle.span8
+      p
+        | Check out the latest things I've been working on below or see them 
+        a(href="/all.html", title="All projects") all
+        | .
+    .span8
       include ../includes/tags
       mixin tags
 
