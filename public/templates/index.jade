@@ -17,10 +17,14 @@ block content
     ul#projects
       for project in projects
         a(href=project.url)
-          li.project.span5(title=project.title)
+          li.project.span5(title=project.title,
+            class=project.metadata.tags)
             div#project-thumb
               if project.metadata.image_url
                 img(src=project.metadata.image_url,
-                    alt="A screenshot of #{project.title}")
+                    alt='A screenshot of #{project.title}')
             p.title=project.title
             p.abstract #{project.metadata.abstract}.
+
+block scripts
+  script(src='/assets/script/filter.js')

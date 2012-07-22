@@ -9,6 +9,6 @@ mixin tags
   ul#tags.icon-tags
     for tag in _.keys(tags).sort()
       li
-        a(href='\##{tag}')=tag
+        a(href='\##{tag}', id=tag, class='tag', title='Filter #{tag} projects')=tag
     li
-      a(href='#all') all
+      a(href='#all', id='all', class='tag', title='Show all projects') all
