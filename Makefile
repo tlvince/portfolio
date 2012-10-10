@@ -3,25 +3,35 @@
 
 in=public
 out=build
-style=contents/assets/style
+bin=node_modules/wintersmith/bin
 
 all: build
 
-# Temporary hack until wintersmith/#10 is implemented:
-# https://github.com/jnordberg/wintersmith/issues/10
-build:
-	if test -d $(out); then rm -rf $(out); fi
-	mkdir -p $(out)/assets/style
-	stylus --out $(out)/assets/style --compress $(in)/$(style)/site.styl
-	mv $(in)/$(style) tmp-style
-	wintersmith build --output ../$(out) --chdir $(in)
-	mv tmp-style $(in)/$(style)
+build: clean
+	$(bin)/wintersmith build --output ../$(out) --chdir $(in)
 
 preview:
-	wintersmith preview --chdir $(in)
+	$(bin)/wintersmith preview --chdir $(in)
 
 push:
 	git push origin master
 	git push heroku master
 
-.PHONY: all build preview push
+heroku: compile build
+
+compile:
+	rm -rf node_modules/wintersmith/lib
+	node_modules/coffee-script/bin/coffee \
+		-o node_modules/wintersmith/lib \
+		-b -c node_modules/wintersmith/src
+
+install:
+	rm -rf node_modules/wintersmith
+	npm install
+
+update: install compile
+
+clean:
+	if test -d $(out); then rm -rf $(out); fi
+
+.PHONY: all build preview push heroku
