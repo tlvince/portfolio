@@ -10,6 +10,6 @@
       "wintersmith-stylus": "0.1.x",
       "wintersmith-coffee": "0.1.x",
       "connect": "2.3.x",
-      "stylus": "0.27.x"
+      "stylus": "0.29.x"
     }
 }
