@@ -34,4 +34,4 @@ update: install compile
 clean:
 	if test -d $(out); then rm -rf $(out); fi
 
-.PHONY: all build preview push heroku
+.PHONY: all build preview push heroku compile install update clean
