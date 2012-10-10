@@ -10,5 +10,14 @@
   "plugins": [
     "wintersmith-stylus",
     "wintersmith-coffee"
+  ],
+  "ignore": [
+    "assets/README.mkd",
+    "assets/style/font-awesome.styl",
+    "assets/style/font-lato.styl",
+    "assets/style/page.styl",
+    "assets/style/variables.styl",
+    "assets/style/bootstrap",
+    "project/Rakefile"
   ]
 }
