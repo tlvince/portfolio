@@ -3,7 +3,7 @@
     "version": "0.1.1",
     "private": true,
     "engines": {
-      "node": "0.6.x"
+      "node": "0.10.x"
     },
     "dependencies": {
       "wintersmith": "git+https://github.com/jnordberg/wintersmith.git",
